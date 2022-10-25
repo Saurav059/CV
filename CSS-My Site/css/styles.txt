@@ -1,0 +1,69 @@
+<!-- <h1 style="border-width: 5px; border-style: inset; padding:10px;"></h1>
+  if there is no content inside our element and we don't specify any style like in above h1 tag, then there will be
+  space for only margins in our site. By default, every property has value 0 except margin values. property 'height'
+  means the height of content-area unless box-sizing is set to some value.
+  Also, margin does go outside the body portion. Like margin of first and last element in the body goes out. No, actually
+  body also has margin. So to remove it so that our webpage covers the full screen, we need to set margin to 0. -->
+
+/* changing the value of padding for all sides also changes the default content-area. when we do padding, it only affect the
+content but not the things like background-image or background-color.
+block-display gives a html-element a whole screen so that no other subsequent element can take space right next to it but in the
+next line only. its width can be changed for the content and style it is given but it stills hold the whole screen space.
+inline-display, on the otherhand takes as much space as it is needed as per the content & we can't change its width.
+e.g. span, anchor, img are some of the inline-display while headers, paragraph, table, are some of the block-display.
+While img is inline-block-display whose width can be changed but also works as inline.
+
+Note: block will take full screen even though its previous element is inline and there is enough space left to accomodate its
+      content and width. Also, browser gives slight smudge(space) between consecutive inline elements.
+We use 'span' to differentiate a portion of block element/inline(sometime) so that we can style it separately(e.g. 'par' in 'paragraph')
+4.) display: none
+    It will remove the particular element from the page as if it didn't existed, not in the code itself but it is there in code at least.
+    'visibility' is another property by which we can hide the content/element but it does keep the space occupied by the element intact
+    in the page and all other elements flows as usual without taking its space.*/
+
+module 047
+  Even before CSS styling, html tags have default positioning/style.
+  1.) Content is Everything
+      With block element, even though they take 100% of screen width, their height is still determined by its content.
+  2.) Order Comes From code
+  3.) Children elements sit on parent elements.
+      This kind of introduces the concept of z-axis. The children element will go further from the screen towards the viewer in
+      comparison to its parent element.
+
+To remove an element from the flow of html, we use position. positioning an element(relative or absolute) will leave it floating
+over page while other subsequent elements will be ordered as if that element doesn't exist even when the subsequent element gets
+covered/overlapped by the element. 
+POSITION:
+  1.) Static -> It is default
+  2.) Relative -> This allows us to position the element that we select relative to how it would have been positioned had it been static
+                  in its given display-mode.
+                  It overlaps the element that comes in its road to of shifting which makes the part of overlapped element invisible.
+                  remember its working as it you are increasing the size of margin on respective sides
+                  e.g. top:100px means increase the size of margin(apparently) by 100px except margin is not actually changed but then
+                  element shifted down by 100px as if the margin took earlier 100px space on the top. Also, when margin size is changed,
+                  it won't overlap other element but shifts them as well to accommodate itself which positioning doesn't do.
+                  Note: positioning is very mean/selfish.
+
+   3.) absolute -> This position the element with respect to the 'margin edge' of the immediate parent element provided it also
+                   contains position(either relative or absolute) otherwise 'body' will be deciding factor. right:20px; means the
+                    element will be at distance of 20px from the right 'margin edge' of the body. It also seems like(may be) after
+                    positioning the <div> won't be acting/covering the full screen. As the position of one element changes, the other
+                    elements try to occupy that position if possible.
+
+   4.) fixed -> This will fix the element in the given position on the screen & not on the body as we scroll down the pages.
+                Its position is given same as absolute.
+
+ TEXT-ALIGN:
+  text-align: center; will align the texts in the center if it is contained inside inline elements or block elements with no set width.
+  It is styled inside parent element.
+ auto:
+  when it is applied to a element/margin will be aligned at center either vertically or horizontally no matter if it is inline or block.
+
+ Font-size:
+  16px = 100% = 1em;    //1 em != 1em //don't give space between value & unit.
+  In older times, 1 em means size of capital 'M' but now it is equals to 16px or 100%.
+  % and 'em' are dynamic font size which will change as per the browser font settings(small,medium,large) but 'px' is static.
+  % and 'em' of parent also add up to already set font-size inside child element so it will sometime make complicated to use
+  dynamic font-sizing. That is why, a new unit came up as
+                                                'rem' means 'root em'
+  which doesn't get add up with font-size of parent.

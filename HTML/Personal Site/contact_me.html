@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>contact_me</title>
+    <link  href="../css/styles.css" rel="stylesheet">
+  </head>
+  <body>
+
+  <h3>Contact me</h3>
+  <ol>
+    <li><a href="mailto:roshanbarnwal4374@gmail.com">📧roshanbarnwal4374@gmail.com</a></li>
+    <li>📲+91-6287725631</li>
+    <li><a href="https://twitter.com/home">@RoshanB4374</a></li>
+    <li>Roshan Barnwal @linkdin</li>
+  </ol>
+  <!--action attribute will take to destination given after we hit submit button & post method will send all data given in form to that destination.
+    encoding type will tell post method in what form the data is to be sent which in this case is plain text.-->
+  <form class="" action="mailto:sajanbarnwal4374@gmail.com" method="post" enctype="text/plain">
+    <label>Name: </label>
+    <!--'name' helps in distinction between various 'input'. When the data is sent using 'post', the input given by user is distinguished by value
+      of 'name' attribute.-->
+    <input type="text" name="yourName " value=""><br />
+    <label>Email: </label>
+    <input type="email" name="yourEmail "placeholder="personal email" /><br />
+    <fieldset width="50" height="50">
+      <legend>Tell me about yourself</legend>
+    </fieldset><br />
+    <!--textarea will give space to write down message with its default size given but its size can be grown.-->
+    <textarea name="yourMessage " rows="10" cols="30"></textarea><br />
+    <label>Date of birth</label>
+    <input type="date" name="" value=""><br />
+    <!--'accept' will open the file choosing option with only the file that are acceptable.-->
+    <input type="file" accept="text/plain" name="file" value=""><br />
+    <input type="submit" name="" value="submitItIs">
+  </form>
+  </body>
+</html>

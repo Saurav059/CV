@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<!--It tells browser to render the code according to html 5 version. Browser itself gives default CSS to our webpage.-->
+<html>
+<!--this tag contains html codes  -->
+
+<head>
+  <!--this contains information about webpage & tells browser how it should handle the page-->
+  <meta charset="utf-8">
+  <!--it tells browser that all the text present in here are encoded using UTF-8 otherwise Mojibake happens -->
+  <meta name="description" content="This website is about me trying to figure out things." />
+  <!--This will appear on google description when we open this website-->
+  <!--One effect of this is that when you link to MDN Web Docs on Facebook/whatsapp, the link appears along with an image and description-->
+  <meta property="og:image" content="something goes here which I don't know right now.maybe data to be associated when link is generated for this website.">
+  <title>Roshan's Personal Website</title>
+  <link  href="../css/styles.css" rel="stylesheet">
+</head>
+
+<body >
+  <!--we can also put img link from webpage like twitter but then our website has to ping twitter for the image. If it gets permission to download
+  the image,it shows in our website. But what if twitter goes down? Then there won't be any image. So chose own pc folder -->
+  <table cellspacing="8">
+    <tr>
+      <td><img class="circular" src="C:\Web Development\HTML\images\roshan_pic.jpg" alt="Roshan profile pic" height="150" /></td>
+      <td>
+        <h1>Roshan Barnwal</h1> <!--tags changes line-->
+        <p><em>Sophomore at <strong>KIIT</strong>.</em></p>
+        <p>I am a coding enthusiast 💻. I love learning new tech stuffs. I'm currently learning webD.</p>
+        <p>I love spicy foods ♨.</p>
+    </td>
+    </tr>
+  </table>
+
+<!--style="border-style:dotted; border-width: 5px;"-->
+  <hr />
+  <h3>Education</h3>
+  <ul>  <!--Contents of lists are created with a tab space/indentation-->
+    <li>
+      Went to Little Angels' Secondary School (Birgung,Parsa,Nepal)
+      <ul><li>Made very good friends for lifetime.</li></ul>
+    </li>
+    <!--target="_blank" attribute will open the link in new window. _self is the default value i.e. same browsing window.-->
+    <li>Went to <a href="https://kiit.ac.in/" target="_blank">KIIT</a> (Bhubaneswar, Odissa, India) for B.Tech (CSE)
+    <ul><li>Learnt to work harder and care no less.</li></ul>
+    </li>
+  </ul>
+  <hr  />
+  <h3>Work Experience</h3>
+  <table cellspacing="4" rules="all">
+    <thead>
+      <tr>
+        <th>Dates</th>  <th>Work</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>2018</td>  <td>passed out 10th</td>
+      </tr>
+      <tr>
+        <td>2021</td>  <td>enrolled in KIIT for B.Tech(CSE)</td>
+      </tr>
+    </tbody>
+  </table>
+  <hr >
+  <h3>My Skills</h3>
+  <table cellspacing="10" border="2">
+    <tr>
+      <td>
+        <table>
+          <tr>
+            <td>C language</td>  <td>⭐⭐⭐⭐☆</td>
+          </tr>
+          <tr>
+            <td>java language</td>  <td>⭐⭐⭐☆☆</td>
+          </tr>
+          <tr>
+            <td>C++ language</td>  <td>⭐⭐⭐☆☆</td>
+          </tr>
+        </table>
+      </td>
+      <td>
+        <table>
+          <tr>
+            <td>html</td>  <td>⭐⭐☆☆☆</td>
+            <td>css</td>  <td>⭐☆☆☆☆</td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+
+  </table>
+  <hr />
+  <h5><a href="contact_me.html">My Contacts</a> <a href="myHobbies.html">        My Hobbies</a></h5>
+
+</body>
+
+</html>

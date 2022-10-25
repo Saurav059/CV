@@ -1,0 +1,32 @@
+/**************tag selectors**************/
+h1{
+  color: red;
+  font-size: 200px;
+}
+/* pseudo class have ':' in their name like hovering class. Both tag and class selectors can be hovered. */
+img:hover{
+background-color: gold;
+}
+img{                    /*overridden by class selectors. */
+background-color: red;
+}
+/**************CLASS SELECTORS*************/
+.bacon{
+  background-color: green;
+}
+.broccoli{
+  background-color: red;
+}
+.circular{
+  border-radius: 100%;
+}
+/**************ID SELECTORS*************/
+#heading{
+  color: blue;
+}
+/*
+It is always good to put tags in ascending order to find a particular tag easily when we have many.
+We can only have single instance of an ID i.e. we can only use it once on only one tag. But we can use class as many time
+as we want. In fact we can use more than 1 class simultaneously on a single html tag but it is invalid for ID.
+Remember, class,tag,ID do follow preferences depending on their scope.
+ */
